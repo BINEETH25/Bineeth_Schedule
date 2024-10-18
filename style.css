@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.day {
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-height: 100px;
+}
+
+#event-form {
+    margin: 20px auto;
+}
+
+#event-text {
+    padding: 10px;
+    width: 200px;
+}
+
+#add-event {
+    padding: 10px;
+    cursor: pointer;
+}
