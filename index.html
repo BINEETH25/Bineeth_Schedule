@@ -3,23 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Custom Calendar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personal Schedule Assistant</title>
+    <style>
+        /* Basic CSS to define layout */
+        body {
+            display: grid;
+            grid-template-areas:
+                "sidebar main main main sidebar-right"
+                "sidebar main main main sidebar-right"
+                "footer footer footer footer footer";
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+            margin: 0;
+            gap: 10px;
+        }
+        
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        
+        .main {
+            grid-area: main;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .sidebar-right {
+            grid-area: sidebar-right;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        
+        .footer {
+            grid-area: footer;
+            background-color: #d0d0d0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .calendar-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .calendar {
+            background-color: white;
+            height: 400px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Placeholder boxes */
+        .box {
+            height: 150px;
+            margin-bottom: 20px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Calendar</h1>
 
-    <!-- Event creation form -->
-    <div id="event-form">
-        <input type="text" id="event-text" placeholder="Enter your event">
-        <button id="add-event">Add Event</button>
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <div class="box">US Holidays</div>
+        <div class="box">Personal Data for Calendar</div>
+        <div class="box">Personal Events</div>
     </div>
 
-    <!-- Calendar -->
-    <div id="calendar">
-        <!-- Days will be dynamically generated -->
+    <!-- Main Calendar Section -->
+    <div class="main">
+        <div class="calendar-controls">
+            <button>Day</button>
+            <button>Week</button>
+            <button>Month</button>
+            <button>Year</button>
+        </div>
+        <div class="calendar">
+            Calendar Placeholder
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Right Sidebar -->
+    <div class="sidebar-right">
+        <div class="box">Progress Meter</div>
+        <div class="box">Reminder</div>
+        <div class="box">Notes</div>
+    </div>
+
+    <!-- Footer for Task Management -->
+    <div class="footer">
+        <div class="box" style="width: 60%; margin: auto;">Task Bar for Deadline</div>
+        <div class="box" style="width: 20%; margin: auto;">Add Task</div>
+    </div>
+
 </body>
 </html>
